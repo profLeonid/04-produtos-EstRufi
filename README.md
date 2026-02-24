@@ -1,1 +1,5 @@
-# Criando novas Tegs utilizando JavaScript
+# Realizando um cadastro de produtos
+## utilizando
+* Framework tailwind css
+* HTML
+* CSS
