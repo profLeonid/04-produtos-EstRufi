@@ -29,3 +29,5 @@ function adicionarProduto(){
     produto.value = ""
     quantidade.value = ""
 }
+
+// falta validação e deixar bonito
