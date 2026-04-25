@@ -13,6 +13,11 @@ function adicionarProduto(){
     const spanProduto = document.createElement("span")
     const spanQuantidade = document.createElement("span")
 
+
+    if(!validarCodigo(codigo.value) || !validarProduto(produto.value) || !validarQuantidade(quantidade.value)){
+        return false
+    }
+
     spanCodigo.textContent = codigo.value
     spanProduto.textContent = produto.value
     spanQuantidade.textContent = quantidade.value
@@ -28,6 +33,42 @@ function adicionarProduto(){
     codigo.value = ""
     produto.value = ""
     quantidade.value = ""
+
 }
 
 // falta validação e deixar bonito
+
+function validarCodigo(codigo){
+
+    if(codigo.trim() === ""){
+        alert("Você deixou o campo vazio, refaça")
+        return false
+    }
+    else{
+        return true
+    }
+}
+
+function validarProduto(produto){
+    if(produto.trim() === ""){
+        alert("Você deixou o campo vazio, refaça")
+        return false
+    }
+    else{
+        return true
+    }
+}
+
+function validarQuantidade(quantidade){
+    if(quantidade.trim() === ""){
+        alert("Você deixou o campo vazio, refaça")
+        return false
+    }
+    else if(isNaN(quantidade)){
+        alert("Por favor só coloque números")
+        return false
+    }
+    else{
+        return true
+    }
+}
